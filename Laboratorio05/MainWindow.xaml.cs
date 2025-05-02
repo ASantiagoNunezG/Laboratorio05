@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -85,7 +86,8 @@ namespace Laboratorio05
                                 CodPostal = reader["CodPostal"].ToString(),
                                 Pais = reader["Pais"].ToString(),
                                 Telefono = reader["Telefono"].ToString(),
-                                Fax = reader["Fax"].ToString()
+                                Fax = reader["Fax"].ToString(),
+                                Activo = reader["Activo"] != DBNull.Value && Convert.ToInt32(reader["Activo"]) == 1
 
                             };
                             listaClientes.Add(cliente);

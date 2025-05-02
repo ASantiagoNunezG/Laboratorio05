@@ -19,5 +19,6 @@ namespace Laboratorio05
         public string Pais { get; set; }
         public string Telefono { get; set; }
         public string Fax { get; set; }
+        public bool Activo { get; set; }
     }
 }

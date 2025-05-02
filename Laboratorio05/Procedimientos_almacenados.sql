@@ -116,3 +116,29 @@ END;
 USP_ListarClientes
 
 select * from clientes;
+
+-- Procedimiento almacenado alterado para que pueda ver el campo activo
+
+ALTER PROCEDURE USP_ListarClientes
+AS
+BEGIN
+    SELECT 
+        idCliente,
+        NombreCompañia,
+        NombreContacto,
+        CargoContacto,
+        Direccion,
+        Ciudad,
+        Region,
+        CodPostal,
+        Pais,
+        Telefono,
+        Fax,
+		Activo
+    FROM dbo.clientes
+    WHERE Activo = 1;
+END;
+
+USP_ListarClientes
+
+select * from clientes;
